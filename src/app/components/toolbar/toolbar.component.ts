@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {EdfStateService} from '../../core/services/edf/edf-state.service';
 import {SortOrder} from '../../core/model/sort-order.model';
 import {AsyncPipe} from '@angular/common';
-import {SortButton} from './sort-button/sort-button.component';
+import {SortButton} from '../button/sort-button/sort-button.component';
 
 @Component({
     selector: 'ev-toolbar',

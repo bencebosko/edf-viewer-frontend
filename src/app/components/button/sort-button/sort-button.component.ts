@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, Input, Output} from '@angular/core';
 import {AsyncPipe, NgClass} from '@angular/common';
 import {Subject} from 'rxjs';
 import {SortOrder} from '../../../core/model/sort-order.model';
-import {Button} from './button.component';
+import {Button} from '../button.component';
 
 @Component({
     selector: 'ev-sort-button',
