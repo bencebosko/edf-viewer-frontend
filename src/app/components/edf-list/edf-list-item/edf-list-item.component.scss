@@ -1,0 +1,45 @@
+@import 'src/styles/theme';
+
+.edf-list-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color: $bg-color-block;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow-md;
+    cursor: pointer;
+}
+
+.edf-list-item-top {
+    display: flex;
+
+    .file-name {
+        font-size: $font-size-md;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.edf-list-item-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .validity {
+        font-size: $font-size-sm;
+        color: $color-error;
+    }
+
+    .validity[data-valid="true"] {
+        color: $color-success;
+    }
+
+    .edf-id {
+        font-size: $font-size-sm;
+    }
+
+    .record-date {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+    }
+}

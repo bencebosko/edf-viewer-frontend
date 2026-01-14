@@ -1,0 +1,42 @@
+@import 'src/styles/theme';
+
+.popup-overlay {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: rgba(black, 0.6);
+    z-index: $z-index-1;
+}
+
+.popup {
+    background: $bg-color-block;
+    gap: 1rem;
+    border-radius: $border-radius-sm;
+    z-index: $z-index-2;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+
+    .title {
+        color: $color-primary;
+        font-size: calc($font-size-md + 0.1rem);
+        line-height: calc($font-size-md + 0.1rem);
+        font-weight: $font-weight-semi-bold;
+    }
+
+    .close-icon {
+        color: $color-primary;
+        font-size: 32px;
+        cursor: pointer;
+    }
+}

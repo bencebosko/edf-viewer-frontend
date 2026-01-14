@@ -1,0 +1,9 @@
+<div class="toolbar">
+    <span class="toolbar-logo">{{'EDF viewer'}}</span>
+    <ev-sort-button class="toolbar-button"
+                    [buttonText]="'Record date'"
+                    [buttonClass]="'ev-primary-button'"
+                    [sortOrder]="sortOrder$ | async"
+                    (sortOrderSelected)="reloadListItems($event)">
+    </ev-sort-button>
+</div>

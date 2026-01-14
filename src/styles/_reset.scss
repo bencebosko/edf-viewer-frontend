@@ -1,0 +1,34 @@
+@import 'src/styles/theme';
+
+* {
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $text-color-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: 1;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color-main;
+}
+
+a, button {
+    user-select: none;
+}
+
+menu, ul, ol, li {
+    list-style: none;
+}
+
+button, a, input, option, select, textarea {
+    all: unset;
+}
+
+button, a {
+    cursor: pointer;
+}

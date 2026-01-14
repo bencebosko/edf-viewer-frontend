@@ -1,0 +1,38 @@
+<div *ngIf="edfRecord$ | async as edfRecord" class="edf-details-data">
+    <div class="edf-details-row">
+        <span class="title">{{'File name:'}}</span>
+        <span class="value">{{edfRecord?.fileName ?? ''}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Validity:'}}</span>
+        <span class="value validity-value" [attr.data-valid]="edfRecord?.isValid">{{edfRecord?.isValid ? 'Valid' : 'Invalid'}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'EDF id:'}}</span>
+        <span class="value">{{edfRecord?.id ?? ''}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Record date:'}}</span>
+        <span class="value">{{edfRecord?.recordDate | date: 'yyyy. mm. dd.'}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Patient name:'}}</span>
+        <span class="value">{{edfRecord?.patientName ?? ''}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Channel names:'}}</span>
+        <span class="value">{{edfRecord?.channelNames?.join(' ') ?? ''}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Channel types:'}}</span>
+        <span class="value">{{edfRecord?.channelTypes?.join(' ') ?? ''}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Number of records:'}}</span>
+        <span class="value">{{edfRecord?.numberOfRecords}}</span>
+    </div>
+    <div class="edf-details-row">
+        <span class="title">{{'Number of annotations:'}}</span>
+        <span class="value">{{edfRecord?.numberOfAnnotations}}</span>
+    </div>
+</div>

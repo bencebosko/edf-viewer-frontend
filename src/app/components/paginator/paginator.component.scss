@@ -1,0 +1,65 @@
+@import 'src/styles/theme';
+
+.paginator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    .previous-buttons,
+    .next-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.paginator-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    padding: 8px;
+    background-color: $bg-color-gray;
+    border-radius: 50%;
+    cursor: pointer;
+
+    .icon {
+        font-size: 19px;
+    }
+
+    .line {
+        height: 15px;
+        width: 1px;
+        background-color: $text-color-primary;
+    }
+}
+
+.paginator-button:active {
+    background-color: lighten($bg-color-gray, 2.5%);
+}
+
+.pagination-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 0.5rem;
+    user-select: none;
+
+    .page-from-to {
+        font-size: calc($font-size-sm + 0.05rem);
+        line-height: 1;
+    }
+
+    .of {
+        font-size: $font-size-sm;
+        line-height: 1;
+        color: $text-color-secondary;
+    }
+
+    .total-count {
+        font-size: calc($font-size-sm + 0.05rem);
+        line-height: 1;
+        font-weight: $font-weight-medium;
+    }
+}

@@ -1,0 +1,4 @@
+<button [ngClass]="buttonClass" [attr.data-pushed]="buttonPushed$ | async" (click)="click()">
+    <span class="ev-button-text">{{buttonText}}</span>
+    <i class="bi ev-button-icon sort-button-icon" [ngClass]="getSortIconClass()"></i>
+</button>

@@ -1,0 +1,25 @@
+<div *ngIf="pagingInfo$ | async as pagingInfo" class="paginator">
+    <div class="previous-buttons">
+        <div class="paginator-button" (click)="firstPage()">
+            <div class="line"></div>
+            <i class="bi bi-chevron-left icon"></i>
+        </div>
+        <div class="paginator-button" (click)="previousPage()">
+            <i class="bi bi-chevron-left icon"></i>
+        </div>
+    </div>
+    <div class="next-buttons">
+        <div class="pagination-info">
+            <span class="page-from-to">{{getPageFromToText(pagingInfo)}}</span>
+            <span class="of">{{'of'}}</span>
+            <span class="total-count">{{pagingInfo?.totalCount ?? 0}}</span>
+        </div>
+        <div class="paginator-button" (click)="nextPage()">
+            <i class="bi bi-chevron-right icon"></i>
+        </div>
+        <div class="paginator-button" (click)="lastPage()">
+            <i class="bi bi-chevron-right icon"></i>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>

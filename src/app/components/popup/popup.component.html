@@ -1,0 +1,11 @@
+<div class="popup-overlay">
+    <div class="popup" [style.width]="popupWidth$ | async" [style.padding]="(popupConfig$ | async)?.popupPadding ?? '0'" evClickOut (clickOut)="close()">
+        <div class="popup-header">
+            <span class="title">{{(popupConfig$ | async)?.popupTitle ?? ''}}</span>
+            <i class="bi bi-x close-icon" (click)="close()"></i>
+        </div>
+        <div class="popup-body">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

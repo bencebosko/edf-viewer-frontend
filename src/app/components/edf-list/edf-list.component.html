@@ -1,0 +1,9 @@
+<ng-container *ngIf="!(isEmpty$ | async)">
+    <div class="edf-list">
+        <ev-edf-list-item *ngFor="let edfListItem of edfListItems$ | async" [edfListItem]="edfListItem" (itemClicked)="openRecord($event)"></ev-edf-list-item>
+    </div>
+    <ev-paginator [pagingInfo]="pagingInfo$ | async" (pagingInfoChanged)="reloadListItems($event)"></ev-paginator>
+</ng-container>
+<div *ngIf="isEmpty$ | async" class="edf-list-empty-state">
+    <span class="text">{{'No EDF files found.'}}</span>
+</div>

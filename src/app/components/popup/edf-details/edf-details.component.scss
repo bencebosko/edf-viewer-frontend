@@ -1,0 +1,40 @@
+@import 'src/styles/theme';
+
+.edf-details-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.edf-details-row {
+    display: flex;
+    padding: 1rem 0.5rem;
+
+    .title,
+    .value {
+        color: $color-primary;
+        width: 50%;
+        font-size: calc($font-size-md - 0.05rem);
+        line-height: 1.5;
+    }
+
+    .title {
+        font-weight: $font-weight-medium;
+    }
+
+    .validity-value {
+        color: $color-error;
+    }
+
+    .validity-value[data-valid="true"] {
+        color: $color-success
+    }
+}
+
+.edf-details-row:nth-child(odd) {
+    background-color: $bg-color-gray;
+}
+
+.edf-details-row:last-child {
+    border-bottom-left-radius: $border-radius-sm;
+    border-bottom-right-radius: $border-radius-sm;
+}

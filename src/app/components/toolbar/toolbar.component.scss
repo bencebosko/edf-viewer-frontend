@@ -1,0 +1,19 @@
+@import 'src/styles/theme';
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+.toolbar-logo {
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    user-select: none;
+}
+
+.toolbar-button {
+    align-self: end;
+}

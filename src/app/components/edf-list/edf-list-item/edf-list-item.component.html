@@ -1,0 +1,10 @@
+<div class="edf-list-item" (click)="handleClick()">
+    <div class="edf-list-item-top">
+        <span class="file-name">{{edfListItem?.fileName ?? ''}}</span>
+    </div>
+    <div class="edf-list-item-bottom">
+        <span class="validity" [attr.data-valid]="edfListItem?.isValid">{{edfListItem?.isValid ? 'Valid' : 'Invalid'}}</span>
+        <span class="edf-id">{{edfListItem?.id ?? ''}}</span>
+        <span class="record-date">{{edfListItem?.recordDate | date:'yyyy. MM. dd'}}</span>
+    </div>
+</div>

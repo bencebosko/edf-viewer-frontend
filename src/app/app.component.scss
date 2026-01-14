@@ -1,0 +1,13 @@
+@import 'src/styles/theme';
+
+.app-main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: $max-width-normal;
+    padding: 1rem;
+}

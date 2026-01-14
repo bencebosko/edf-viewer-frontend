@@ -1,0 +1,52 @@
+@import 'src/styles/theme';
+
+%ev-button {
+    display: flex;
+    width: max-content;
+    height: 42px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.8rem 0.6rem;
+    box-shadow: $box-shadow-lg;
+    border-radius: $border-radius-sm;
+    box-sizing: border-box;
+}
+
+@mixin push-animation-lighten($backgroundColor) {
+    animation-name: push-animation-lighten;
+    animation-duration: .2s;
+
+    @keyframes push-animation-lighten {
+        80% {
+            box-shadow: $box-shadow-md;
+            background-color: lighten($backgroundColor, 10%);
+        }
+    }
+}
+
+@mixin push-animation-darken($backgroundColor) {
+    animation-name: push-animation-darken;
+    animation-duration: .2s;
+
+    @keyframes push-animation-darken {
+        80% {
+            box-shadow: $box-shadow-md;
+            background-color: darken($backgroundColor, 10%);
+        }
+    }
+}
+
+.ev-primary-button {
+    @extend %ev-button;
+    background-color: $color-primary;
+
+    .ev-button-text,
+    .ev-button-icon {
+        color: white;
+    }
+
+    &[data-pushed="true"] {
+        @include push-animation-lighten($color-primary);
+    }
+}
